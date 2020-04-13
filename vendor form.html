@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <h1 align="center">     Vendor Registration Form</h1>
+  </head>  
+<body>
+<script type="text/javascript">
+    function Validate() {
+        var password = document.getElementById("myInput").value;
+        var confirmPassword = document.getElementById("cnfpass").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }
+function myFunction() {
+  var x = document.getElementById("myInput");
+
+  if (x.type === "password" ) {
+    x.type = "text";
+  } 
+ else
+{
+x.type="password"
+}
+}
+function myFunction1() {
+  var x = document.getElementById("cnfpass");
+
+  if (x.type === "password" ) {
+    x.type = "text";
+  } 
+ else
+{
+x.type="password"
+}
+}
+
+	
+</script>
+
+<form>	
+     <table align="center">		
+           <tr>
+		<td>				
+                   Name :			
+               </td>			
+                <td>				
+                   <input type=”text” placeholder="Enter your name" name=””  required="required">			
+                </td>
+</tr><tr>
+		<td>				
+                   Phone Number:			
+               </td>			
+                <td>				
+                   <input type=”text” name=”” placeholder="Enter your phone number" required pattern="^[7-9][0-9]{9}$">			
+                </td>	
+</tr><tr>		
+               <td>				
+                   Email Address:			
+               </td>			
+                <td>				
+                   <input type=”text”  placeholder="abc@gmail.com" email=””  required="required">			
+                </td>		
+           </tr>
+            <tr>
+                 <td>				
+                   Password:			
+                 </td>			
+                 <td>	
+		<input type="password"  id="myInput" placeholder="Enter your password" name=”” pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  required="required" title="it should contain caps letter, one small letter and digit">
+		<input type="checkbox" onclick="myFunction()">Show Password		
+                   			
+		
+			</td>		
+           </tr>
+		<tr>
+                 <td>				
+                   Reenter Password:			
+                 </td>			
+                 <td>				
+			<input type="password"  id="cnfpass" placeholder="Enter your password again" name=”” pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  required="required">			
+                 <input type="checkbox" onclick="myFunction1()">Show Password
+</td>		
+           </tr>
+		
+			
+			<tr> <td> Please select your gender:
+			</td> 			
+                 <td><tr><td></td><td>
+ 		 <input type="radio" id="male" name="gender" value="male"                >
+  		                    <label          for="male"> Male</label> </tr></td>			
+                 <tr><td></td><td>
+  		<input  type="radio" id="female" name="gender" value="female">
+  		<label for="female">Female</label> </td>			
+                 </tr><td></td><td>
+		<tr><td></td><td>
+  		<input type="radio" id="other" name="gender" value="other">
+  		<label for="other">Other</label>  </td>			
+                 </tr>
+			<tr>
+<td> Date Of Birth</td>
+<td>
+			<input type="date" data-date="" data-date-format="DD MMMM YYYY" >
+</td></tr>
+
+		<tr>
+                    <td>Address</td>
+                    <td><textarea rows="4" cols="50" name="address" required="required"></textarea></td>
+                </tr>	
+		<tr>
+                    <td><input type="submit" name="submit" onclick="return Validate()" ></td>
+                    <td><input type="reset" value="Clear" name="clear"></td>
+                </tr>
+
+     </table>
+
+</form> 
+</body>
+</html>

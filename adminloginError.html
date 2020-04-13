@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Home Service</title>
+<meta charset="utf-8">
+<script type="text/javascript" src = "script.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<table>
+		<tr>
+			<td><img src="admin.png" alt="image" width="100"
+				height="100"></td>
+			<td id="empty" width="380px"></td>
+			<td><h1 id="heading">Home Service</h1></td>
+		</tr>
+	</table>
+	<form name="myForm" action="AdminLoginServlet" onsubmit="return loginvalidateForm()"
+		method="post" required="required">
+		<h1 name="adminuser" id="adminreghead">Admin Login</h1>
+		<br> <label id="adminloginemail"><b>Email:</b></label> 
+		<input type="text" placeholder="Enter Email" size="50" id="loginname" name="loginname1"><br> <label id="adminloginemail"><b>Password:</b></label>
+		<input type="password" size="50" id="myInput" placeholder="Enter your password" name="pass1"> <input
+			id="check" type="checkbox" onclick="myFunction()"><span
+			id="show"><b>Show Password</b></span><br> 
+			<input type="submit" value="Login" class="adminregsubmit" name="submit"><h1 style="color:red;">Email or password incorrect</h1>
+	</form>
+	<footer>
+		<div id=footer1>&copy; Copyright 2020 Home Service - Made with
+			&hearts; in Hyderabad</div>
+
+	</footer>
+</body>
+</html>

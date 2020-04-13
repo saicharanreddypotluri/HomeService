@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home Service</title>
+<meta charset="utf-8">
+<script type="text/javascript" src = "script.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<table >
+		<tr>
+			<td><img src="customer.jpg" alt="image" width="100" height="100"></td>
+			<td id="empty" width="200px"></td>
+			<td><h1 id="heading">Home Service</h1></td>
+			<td>             </td>
+			<td ><form action ="HomeService1stPage.html" >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+			<input type="submit" name="submit" value="HOME SERVICE" class="adminregsubmit1" ><br>
+				</form>
+			</td>
+		</tr>
+	</table>
+<form name="myForm" action="VendorLoginServlet" onsubmit="return vendorvalidateForm()" method="post" required="required">
+  <div >
+    <h1 id="adminreghead">Vendor Register</h1>
+    <p id="adminregtext"><b>Please fill in this form to create an account.</b></p>
+      <br>
+    <br>
+    <label><b  style="color:white;">FirstName:</b></label>
+    <input type="text" size="50" placeholder="Enter First Name" name="fname" id="firstname" ><br>
+    
+    <label><b style="color:white;">LastName:</b></label>
+    <input type="text" size="50" placeholder="Enter Last Name" name="lname" id="lastname"><br>
+    <label><b style="color:white;">Age:</b></label>
+    <input type="text" size="50" placeholder="Enter your age" id="age" name="personage"><br>
+      
+      <label><b style="color:white;"> Please select your gender:</b></label>
+      
+     <b style="color:white;"> <input type="radio" id="male"   name="gender" value="M"   required           >
+      Male	&emsp;&emsp;</b>
+       <b style="color:white;"><input type="radio" id="female" name="gender" value="F" >
+        Female &emsp;&emsp;</b>
+       <b style="color:white;"> <input type="radio" id="other" name="gender" value="O" >
+  		Other<br></b>
+    <label><b style="color:white;">Contact Number:</b></label>
+    <input type="tel" size="50" placeholder="Enter Contact Number" id="phnum" name="phone" pattern="[789]{1}[0-9]{9}"><br>
+    
+    <label><b style="color:white;">Vendor Id:</b></label>
+    <input type="text" placeholder="Enter Vendor Id" size="50" id="vendorid" name="vid"><br>
+
+    <label><b style="color:white;">Password:</b></label>
+    <input type="password" size="50" id="myInput" placeholder="Enter your password" name="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"   title="it should contain caps letter, one small letter and digit">
+		<input id="check" type="checkbox" onclick="myFunction()"><span id="show"><b>Show Password</b><br></span>
+      
+    <label><b style="color:white;">Re-enter Password:</b></label>
+    <input type="password"  id="cnfpass" placeholder="Enter your password again" name="pass1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" size="50" >			
+      <input type="checkbox" onclick="myFunction1()"><span id="show"><b>Show Password</b><br></span>
+
+    <input type="submit" class="adminregsubmit" value="Register" name="submit" onclick="return Validate()"><br>
+  </div>  
+</form>
+    <footer>
+    <div id=footer1>
+        &copy; Copyright 2020 Home Service - Made with &hearts; in Hyderabad
+    </div>
+</footer>
+</body>
+</html>
